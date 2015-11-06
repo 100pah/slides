@@ -1,15 +1,26 @@
-## 数据和视觉编码
+## 数据 · 视觉编码 · 交互
 
 Echarts团队
 
-
+Note:
+自我介绍
 
 ---
 
-![](./asset/img/warm-up-v0.png)
 
-Note:
-warm up.
+![](./asset/img/data-mess.jpg)
+
+Note: 海量数据
+
+----
+
+![](./asset/img/data-understanding.jpg)
+
+Note: 如何转化为人脑可认知的视觉元素
+
+----
+
+![](./asset/img/warm-up-v0.png)
 
 ----
 
@@ -19,7 +30,8 @@ warm up.
 
 ![](./asset/img/warm-up-trend0.png)
 
-Note: 哪个年龄段及收入水平人群的三酸甘油脂水平（身体脂肪量）趋势与其他均不同？
+Note:
+哪个年龄段及收入水平人群的三酸甘油脂水平（身体脂肪量）趋势与其他均不同？
 
 ----
 
@@ -71,19 +83,6 @@ Note:
 
 # 数据
 
-
-----
-
-
-![](./asset/img/data-mess.jpg)
-
-Note: 海量数据
-
-----
-
-![](./asset/img/data-understanding.jpg)
-
-Note: 如何转化为人脑可认知的视觉元素
 
 ----
 
@@ -225,6 +224,39 @@ Note:
 
 ----
 
+
+#### 更多的维度
+
+```
+[
+    [1,55,9,56,0.46,18,6,"良"],
+    [2,25,11,21,0.65,34,9,"优"],
+    [3,56,7,63,0.3,14,5,"良"],
+    [4,33,7,29,0.33,16,6,"优"],
+    [5,42,24,44,0.76,40,16,"优"],
+    [6,82,58,90,1.77,68,33,"良"],
+    [7,74,49,77,1.46,48,27,"良"],
+    [22,84,94,140,2.238,68,18,"良"],
+    [23,93,77,104,1.165,53,7,"良"],
+    [24,99,130,227,3.97,55,15,"良"],
+    [25,146,84,139,1.094,40,17,"轻度污染"],
+    [26,113,108,137,1.481,48,15,"轻度污染"],
+    [27,81,48,62,1.619,26,3,"良"],
+    ...
+]
+```
+
+
+----
+
+#### 三维 · 高度
+
+~[1200*650](./asset/ec-demo/global-population.html)
+
+
+----
+
+
 ### 视觉突出
 
 ~[1000*500](./asset/ec-demo/symbol-categories.html)
@@ -255,15 +287,47 @@ Note:
 
 ---
 
+# 交互
+
+----
+
+### 反馈回路
+
+![](./asset/img/visual-analysis-model.png)
+
+Note:
+这是个 “可视分析模型” 图。
+只是以这个为例说明用户参与的反馈回路。
+
+----
+
 ### 可视化设计原则
 
-* {0|任务}
+<div style="text-align: center">
 
-{0|总览（overview）、缩放（zoom）、过滤（filter）、details-on-demand、相关（relate）、历史（history）}
+<div style="display:inline-block;vertical-align:top;width: 500px;">
+{0|【任务】}
 
-* {1|可视化箴言}
 
-{1|总览为先，缩放过滤，按需查看细节（Overview first，zoom and filter，details on demand）}
+* {0|总览（overview）}
+* {0|缩放（zoom）}
+* {0|过滤（filter）}
+* {0|按需细节<br>（details-on-demand）}
+* {0|相关（relate）}
+* {0|历史（history）}
+</div>
+
+<div style="display:inline-block;vertical-align:top;width: 400px;">
+
+{1|【可视化箴言】}
+
+* {1|总览为先（Overview first）}
+* {1|缩放过滤（zoom and filter）}
+* {1|按需查看细节（details on demand）}
+
+</div>
+
+</div>
 
 
 ----
@@ -271,7 +335,21 @@ Note:
 
 ~[1000*500](./asset/ec-demo/principle-dataZoom.html)
 
+----
 
+## 动画
+
+* {0|带来工程的复杂性}
+
+    * {0|软件脆弱}
+    * {0|代码繁杂}
+
+* {1|表达 数据/图形元素在**变化**中的**联系**，助于理解}
+
+Note:
+
+（1）动画带来工程角度的复杂性，增加软件的脆弱（带来bug），增加代码的繁杂（性能优化）。
+（2）但是表达交互中数据/图形元素变化的联系，助于理解。
 
 
 
@@ -294,10 +372,10 @@ Note:
 
 ----
 
-### 点数据的可视化
+#### 点数据的可视化
 
 
-~[1000*500](./asset/ec-demo/data-weibo.html)
+{0|~[1000*500](./asset/ec-demo/map-weibo.html)}
 
 Note:
 
@@ -307,6 +385,8 @@ Note:
 最直接的可视化点数据的方法
 根据坐标直接标识在地图上，圆点是最常用的标识符号，其他标识符号还有向量箭头
 
+
+weibo签到：11.8w 数据
 
 ----
 
@@ -342,28 +422,10 @@ NASA Perpetual Ocean
 ----
 
 
-### 区域数据的可视化
-
-
-~[1000*500](./asset/ec-demo/data-map.html)
-
-
-----
-
-~[1000*500](./asset/ec-demo/data-line-area.html)
-
-
-----
-
-
 ### 时间数据的可视化
 
-~[1000*500](./asset/ec-demo/data-k.html)
 
-
-----
-
-~[1000*500](./asset/ec-demo/data-timeline.html)
+~[1000*500](./asset/ec-demo/timeline-ecnomic.html)
 
 
 ----
@@ -377,7 +439,7 @@ NASA Perpetual Ocean
 
 ----
 
-#### 层级数据的可视化
+#### 层级数据的可视化（树）
 
 
 {0|~[1000*600](./asset/ec-demo/hierarchy-tree.html)}
@@ -394,35 +456,58 @@ visual mapping
 
 ----
 
+深层下钻
 
-~[1000*500](./asset/ec-demo/data-disk.html)
+~[1400*580](./asset/ec-demo/hierarchy-disk.html)
 
 
 ----
 
-### 网络数据的可视化
+#### 网络数据的可视化（图）
 
 
-~[1000*500](./asset/ec-demo/data-graph.html)
+~[1400*600](./asset/ec-demo/graph-layout.html)
 
 Note:
 
-chrod -- graph
+graph 多种layout。
 
 
 ----
 
+#### 力导向
 
-~[1000*500](./asset/ec-demo/data-force.html)
+~[1400*600](./asset/ec-demo/force-webkit.html)
 
 
 ----
 
-### 高维数据
+Note:
 
+### 更多维度
 
-~[1000*500](./asset/ec-demo/color-mix.html)
+```
+[
+    [1,55,9,56,0.46,18,6,"良"],
+    [2,25,11,21,0.65,34,9,"优"],
+    [3,56,7,63,0.3,14,5,"良"],
+    [4,33,7,29,0.33,16,6,"优"],
+    [5,42,24,44,0.76,40,16,"优"],
+    [6,82,58,90,1.77,68,33,"良"],
+    [7,74,49,77,1.46,48,27,"良"],
+    [22,84,94,140,2.238,68,18,"良"],
+    [23,93,77,104,1.165,53,7,"良"],
+    [24,99,130,227,3.97,55,15,"良"],
+    [25,146,84,139,1.094,40,17,"轻度污染"],
+    [26,113,108,137,1.481,48,15,"轻度污染"],
+    [27,81,48,62,1.619,26,3,"良"],
+    ...
+]
+```
 
+----
+
+~[1000*500](./asset/ec-demo/color-mix-aqi.html)
 
 Note:
 
@@ -430,24 +515,34 @@ Note:
 在二维/三维图表上增加视觉通道，以表达更多的属性信息。
 但是 ...
 
+----
+
+Note:
+
+~[1200*650](./asset/ec-demo/global-population.html)
+
+扩充到三维。
 
 ----
+
+Note:
+
+下回再讲吧
 
 ### 高维数据 - 协同分析
 
-
 ~[1000*500](./asset/ec-demo/data-coop-scatter.html)
 
 
 ----
 
+Note:
+
+下回再讲吧
+
 ### 高维数据 - 散点图矩阵
 
-
 ~[1000*500](./asset/ec-demo/data-coop-scatter.html)
-
-Note:
-来不及的话，就用图片吧
 
 
 

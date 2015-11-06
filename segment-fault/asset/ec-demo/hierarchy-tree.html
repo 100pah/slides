@@ -18,12 +18,11 @@
 
             define('init', function (require) {
 
-                var data = require('data/iceBucket');
                 var echarts = require('echarts');
 
                 require('echarts/chart/tree');
 
-                return function() {
+                return function(data) {
 
 
                     var myChart = echarts.init(document.getElementById('main'));
@@ -86,8 +85,8 @@
                 };
             });
 
-            require(['init'], function (init) {
-                init();
+            require(['init', 'data/iceBucket.json'], function (init, data) {
+                init(data);
             });
 
         </script>

@@ -4,6 +4,7 @@
         <script src="../common/esl.js"></script>
         <script src="../common/config.js"></script>
         <link rel="stylesheet" href="../common/reset.css">
+        <link rel="stylesheet" href="../common/simpleRadio.css">
     </head>
     <body>
         <style>
@@ -28,14 +29,8 @@
                 height: 32px;
                 line-height: 32px;
             }
-            .controller .mode-body {
+            .controller #measures {
                 display: inline-block;
-            }
-            .controller .mode-body label {
-                margin-right: 10px;
-            }
-            .controller .mode-body .label-selected {
-                text-decoration: underline;
             }
             .controller .query {
                 display: inline-block;
@@ -46,6 +41,7 @@
                 margin-right: 10px;
                 background: #222;
                 border: 1px solid #999;
+                padding: 0 5px;
                 border-radius: 3px;
                 color: #fff;
             }
@@ -65,10 +61,7 @@
             }
         </style>
         <div class="controller">
-            <div id="measures" class="mode-body">
-                <label data-mode="0" onclick="areaMeasureChange(0);" class="label-selected">2012年预算额</label>
-                <label data-mode="1" onclick="areaMeasureChange(1);">2011年预算额</label>
-                <label data-mode="2" onclick="areaMeasureChange(2);">2012年预算额 + 增长率</label>
+            <div id="measures">
             </div>
             <div class="query">
                 <input id="query-input" type="text" placeholder="请输入节点名" onkeypress="if (event.keyCode === 13) { query(); return false; }"/>
@@ -88,7 +81,8 @@
             var SERIES_NAME = 'Obama’s 2012 Budget Proposal: How $3.7 Trillion is Spent';
 
             require([
-                'data/obama_budget_proposal_2012.tree',
+                'data/obama_budget_proposal_2012.json',
+                'common/simpleRadio',
                 'echarts',
                 'echarts/util/format',
                 'echarts/component/legend',
@@ -97,15 +91,6 @@
             ], init);
 
             function areaMeasureChange(mode) {
-
-                var labels = document.getElementById('measures').querySelectorAll('label');
-                for (var i = 0; i < labels.length; i++) {
-                    labels[i].classList.remove('label-selected');
-                    if (labels[i].getAttribute('data-mode') == mode) {
-                        labels[i].classList.add('label-selected');
-                    }
-                }
-
                 chart.setOption({
                     tooltip: {
                         formatter: getTooltipFormatter(mode)
@@ -280,7 +265,17 @@
                 }
             }
 
-            function init(d, echarts, format) {
+            function init(d, simpleRadio, echarts, format) {
+
+                simpleRadio.init(
+                    document.getElementById('measures'),
+                    [
+                        {value: 0, text: '2012年预算额', selected: true},
+                        {value: 1, text: '2011年预算额'},
+                        {value: 2, text: '2012年预算额 + 增长率'}
+                    ],
+                    areaMeasureChange
+                );
 
                 formatUtil = format;
                 data = d;
@@ -290,10 +285,6 @@
                 });
 
                 chart.setOption({
-
-                    // legend: {
-                    //     data: [SERIES_NAME]
-                    // },
 
                     tooltip: {
                         formatter: getTooltipFormatter(0)
@@ -308,6 +299,7 @@
                                 formatter: "{b}",
                                 normal: {
                                     textStyle: {
+                                        // 现在不能随着动画动，效果不好，所以暂时关掉。
                                         ellipsis: true
                                     }
                                 }
@@ -322,25 +314,6 @@
                         }
                     ]
                 });
-
-                // initController();
-            }
-
-            function initController() {
-                var FizzyText = function() {
-                  this.message = 'dat.gui';
-                  this.speed = 0.8;
-                  this.displayOutline = false;
-                  this.explode = function() {  };
-                  // Define render logic ...
-                };
-
-                var text = new FizzyText();
-                var gui = new dat.GUI();
-                gui.add(text, 'message');
-                gui.add(text, 'speed', -5, 5);
-                gui.add(text, 'displayOutline');
-                gui.add(text, 'explode');
             }
 
         </script>

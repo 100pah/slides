@@ -24,12 +24,9 @@
                 require('echarts-x');
                 require('echarts-x/chart/map3d');
 
-                var data = require('data/wave');
-                var img = require('img/elev_bump');
-
                 var myChart;
 
-                return function () {
+                return function (data, img) {
                     myChart = echarts.init(document.getElementById('main'));
 
                     myChart.showLoading();
@@ -97,8 +94,8 @@
                 };
             });
 
-            require(['init'], function (init) {
-                init();
+            require(['init', 'data/wave', 'img/elev_bump'], function (init, data, img) {
+                init(data, img);
             });
 
         </script>

@@ -10,9 +10,6 @@
         </style>
         <div id="main"></div>
 
-        <script src="data/aqi/BJdata.js"></script>
-        <script src="data/aqi/SHdata.js"></script>
-        <script src="data/aqi/GZdata.js"></script>
         <script>
 
             // Schema:
@@ -28,13 +25,16 @@
             ];
 
             require([
+                'data/aqi/BJdata',
+                'data/aqi/GZdata',
+                'data/aqi/SHdata',
                 'echarts',
                 'echarts/chart/scatter',
                 'echarts/component/legend',
                 'echarts/component/tooltip',
                 'echarts/component/grid',
                 'echarts/component/dataRangePiecewise'
-            ], function (echarts) {
+            ], function (dataBJ, dataGZ, dataSH, echarts) {
 
                 var chart = echarts.init(document.getElementById('main'), null, {
                     renderer: 'canvas'
@@ -168,19 +168,19 @@
                             name: '北京',
                             type: 'scatter',
                             itemStyle: itemStyle,
-                            data: window.AQI_BJ
+                            data: dataBJ
                         },
                         {
                             name: '上海',
                             type: 'scatter',
                             itemStyle: itemStyle,
-                            data: window.AQI_SH
+                            data: dataSH
                         },
                         {
                             name: '广州',
                             type: 'scatter',
                             itemStyle: itemStyle,
-                            data: window.AQI_GZ
+                            data: dataGZ
                         }
                     ]
                 });

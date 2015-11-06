@@ -18,8 +18,7 @@
 
             define('init', function (require) {
 
-                return function() {
-                    var data = require('data/flights');
+                return function(data, img) {
                     var echarts = require('echarts');
                     require('echarts/chart/line');
 
@@ -28,7 +27,6 @@
                     require('echarts-x');
                     require('echarts-x/chart/map3d');
 
-                    var img = require('img/earth');
 
                     var myChart = echarts.init(document.getElementById('main'));
 
@@ -144,8 +142,8 @@
                 };
             });
 
-            require(['init'], function (init) {
-                init();
+            require(['init', 'data/flights.json', 'img/earth'], function (init, data, img) {
+                init(data, img);
             });
 
         </script>
