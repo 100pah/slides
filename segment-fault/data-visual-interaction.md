@@ -62,7 +62,10 @@ Note:
 ![](./asset/img/warm-up-scatters0.png)
 
 Note:
-再举个例子
+
+再举个例子，相关系数。
+安斯库姆四重奏（Anscombe's quartet）。
+分析数据前先绘制图表的重要性。
 
 ----
 
@@ -210,49 +213,45 @@ Note:
 
 {0|~[1000*500](./asset/ec-demo/color-grey.html)}
 
+
 ----
 
-#### 颜色 - 多种视觉通道
+
+<div style="text-align: center; width: 1110px;">
+
+<div style="display:inline-block;vertical-align:middle;width: 300px">
+
+更多的维度<br>
+
+![](./asset/img/dimensions.png)
+
+</div>
+
+
+<div style="display:inline-block;vertical-align:middle;width: 800px">
+
+{0|颜色 - 多种视觉通道}
 
 {0|~[1000*500](./asset/ec-demo/color-mix-aqi.html)}
 
-----
+</div>
+</div>
 
-### 形状
-
-{0|~[1000*500](./asset/ec-demo/symbol.html)}
-
-----
-
-
-#### 更多的维度
-
-```
-[
-    [1,55,9,56,0.46,18,6,"良"],
-    [2,25,11,21,0.65,34,9,"优"],
-    [3,56,7,63,0.3,14,5,"良"],
-    [4,33,7,29,0.33,16,6,"优"],
-    [5,42,24,44,0.76,40,16,"优"],
-    [6,82,58,90,1.77,68,33,"良"],
-    [7,74,49,77,1.46,48,27,"良"],
-    [22,84,94,140,2.238,68,18,"良"],
-    [23,93,77,104,1.165,53,7,"良"],
-    [24,99,130,227,3.97,55,15,"良"],
-    [25,146,84,139,1.094,40,17,"轻度污染"],
-    [26,113,108,137,1.481,48,15,"轻度污染"],
-    [27,81,48,62,1.619,26,3,"良"],
-    ...
-]
-```
 
 
 ----
 
 #### 三维 · 高度
 
-~[1200*650](./asset/ec-demo/global-population.html)
+{0|~[1200*650](./asset/ec-demo/global-population.html)}
 
+
+----
+
+
+### 形状
+
+~[1000*500](./asset/ec-demo/symbol.html)
 
 ----
 
@@ -266,6 +265,10 @@ Note:
 形状为辅助，并不如颜色和大小。
 
 ----
+
+Note:
+
+这个不讲了
 
 ### 色彩设计原则
 
@@ -332,8 +335,7 @@ Note:
 
 ----
 
-
-~[1000*500](./asset/ec-demo/principle-dataZoom.html)
+~[1000*500](./asset/ec-demo/dataZoom-cartesian-hv.html)
 
 ----
 
@@ -399,9 +401,10 @@ Note:
 线数据通常指连接两个或多个地点的线段或路径，线数据具有长度属性，即经过的地理距离
 
 
+
 ----
 
-### 向量
+### 场 · 向量
 
 <div style="width: 600px; float:left">
 {0|<img src="./asset/img/maxresdefault.jpg">}
@@ -425,8 +428,17 @@ NASA Perpetual Ocean
 ### 时间数据的可视化
 
 
+{0|~[1000*500](./asset/ec-demo/dataZoom-cartesian-hv.html)}
+
+Note:
+横轴是时间。
+
+----
+
 ~[1000*500](./asset/ec-demo/timeline-ecnomic.html)
 
+Note:
+时间作为更高层的一个维度。
 
 ----
 
@@ -444,6 +456,8 @@ NASA Perpetual Ocean
 
 {0|~[1000*600](./asset/ec-demo/hierarchy-tree.html)}
 
+Note:
+直接画，但是如果需要表达更多的维度？
 
 ----
 
@@ -456,7 +470,7 @@ visual mapping
 
 ----
 
-深层下钻
+下钻
 
 ~[1400*580](./asset/ec-demo/hierarchy-disk.html)
 
@@ -466,7 +480,7 @@ visual mapping
 #### 网络数据的可视化（图）
 
 
-~[1400*600](./asset/ec-demo/graph-layout.html)
+{0|~[1400*600](./asset/ec-demo/graph-layout.html)}
 
 Note:
 
@@ -477,7 +491,7 @@ graph 多种layout。
 
 #### 力导向
 
-~[1400*600](./asset/ec-demo/force-webkit.html)
+{0|~[1400*600](./asset/ec-demo/force-webkit.html)}
 
 
 ----

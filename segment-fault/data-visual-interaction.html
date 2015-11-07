@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Reveal.js</title>
-        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.6/css/reveal.css">
-        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.6/css/theme/black.css" id="theme">
-        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.6/css/theme/black-md2reveal.css" id="themeMine">
+        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.7/css/reveal.css">
+        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.7/css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.7/css/theme/black-md2reveal.css" id="themeMine">
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.6/lib/css/zenburn.css">
+        <link rel="stylesheet" href="./asset/md2reveal-0.0.1.7/lib/css/zenburn.css">
     </head>
     <body>
 
@@ -51,7 +51,9 @@ Echarts团队
 接受到的信息大部分来源于视觉。视觉擅长进行认知。</aside></script></section><section data-markdown><script type="text/template">
 ![](./asset/img/warm-up-scatters0.png)
 
-<aside class="notes" data-markdown>再举个例子</aside></script></section><section data-markdown><script type="text/template">
+<aside class="notes" data-markdown>再举个例子，相关系数。
+安斯库姆四重奏（Anscombe's quartet）。
+分析数据前先绘制图表的重要性。</aside></script></section><section data-markdown><script type="text/template">
 ![](./asset/img/warm-up-scatters1.png)
 </script></section></section><section ><section data-markdown><script type="text/template">
 
@@ -159,42 +161,40 @@ Echarts团队
 #### 颜色 - 数值型数据
 
 <div class="fragment" data-fragment-index="0"><iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/color-grey.html"></iframe></div>
+
 </script></section><section data-markdown><script type="text/template">
-#### 颜色 - 多种视觉通道
+
+<div style="text-align: center; width: 1110px;">
+
+<div style="display:inline-block;vertical-align:middle;width: 300px">
+
+更多的维度<br>
+
+![](./asset/img/dimensions.png)
+
+</div>
+
+
+<div style="display:inline-block;vertical-align:middle;width: 800px">
+
+<div class="fragment" data-fragment-index="0">颜色 - 多种视觉通道</div>
 
 <div class="fragment" data-fragment-index="0"><iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/color-mix-aqi.html"></iframe></div>
-</script></section><section data-markdown><script type="text/template">
-### 形状
 
-<div class="fragment" data-fragment-index="0"><iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/symbol.html"></iframe></div>
-</script></section><section data-markdown><script type="text/template">
+</div>
+</div>
 
-#### 更多的维度
-
-```
-[
-    [1,55,9,56,0.46,18,6,"良"],
-    [2,25,11,21,0.65,34,9,"优"],
-    [3,56,7,63,0.3,14,5,"良"],
-    [4,33,7,29,0.33,16,6,"优"],
-    [5,42,24,44,0.76,40,16,"优"],
-    [6,82,58,90,1.77,68,33,"良"],
-    [7,74,49,77,1.46,48,27,"良"],
-    [22,84,94,140,2.238,68,18,"良"],
-    [23,93,77,104,1.165,53,7,"良"],
-    [24,99,130,227,3.97,55,15,"良"],
-    [25,146,84,139,1.094,40,17,"轻度污染"],
-    [26,113,108,137,1.481,48,15,"轻度污染"],
-    [27,81,48,62,1.619,26,3,"良"],
-    ...
-]
-```
 
 </script></section><section data-markdown><script type="text/template">
 #### 三维 · 高度
 
-<iframe style="width:1200px;height:650px;" data-md2r-src="./asset/ec-demo/global-population.html"></iframe>
+<div class="fragment" data-fragment-index="0"><iframe style="width:1200px;height:650px;" data-md2r-src="./asset/ec-demo/global-population.html"></iframe></div>
 
+</script></section><section data-markdown><script type="text/template">
+
+### 形状
+
+<iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/symbol.html"></iframe>
 </script></section><section data-markdown><script type="text/template">
 
 ### 视觉突出
@@ -202,24 +202,13 @@ Echarts团队
 <iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/symbol-categories.html"></iframe>
 
 <aside class="notes" data-markdown>形状为辅助，并不如颜色和大小。</aside></script></section><section data-markdown><script type="text/template">
+<aside class="notes" data-markdown>这个不讲了
+
 ### 色彩设计原则
 
 * 避免过多颜色交错导致的杂乱无章
 * 使用中性背景色，控制对全局色彩的影响
-* 最小化同时对比
-
-
-
-
-
-
-
-
-
-
-
-
-</script></section></section><section ><section data-markdown><script type="text/template">
+* 最小化同时对比</aside></script></section></section><section ><section data-markdown><script type="text/template">
 # 交互
 </script></section><section data-markdown><script type="text/template">
 ### 反馈回路
@@ -257,8 +246,7 @@ Echarts团队
 </div>
 
 </script></section><section data-markdown><script type="text/template">
-
-<iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/principle-dataZoom.html"></iframe>
+<iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/dataZoom-cartesian-hv.html"></iframe>
 </script></section><section data-markdown><script type="text/template">
 ## 动画
 
@@ -295,7 +283,7 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 <div class="fragment" data-fragment-index="0"><iframe style="width:1200px;height:600px;" data-md2r-src="./asset/ec-demo/global-airline.html"></iframe></div>
 
 <aside class="notes" data-markdown>线数据通常指连接两个或多个地点的线段或路径，线数据具有长度属性，即经过的地理距离</aside></script></section><section data-markdown><script type="text/template">
-### 向量
+### 场 · 向量
 
 <div style="width: 600px; float:left">
 <div class="fragment" data-fragment-index="0"><img src="./asset/img/maxresdefault.jpg"></div>
@@ -312,9 +300,12 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 ### 时间数据的可视化
 
 
+<div class="fragment" data-fragment-index="0"><iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/dataZoom-cartesian-hv.html"></iframe></div>
+
+<aside class="notes" data-markdown>横轴是时间。</aside></script></section><section data-markdown><script type="text/template">
 <iframe style="width:1000px;height:500px;" data-md2r-src="./asset/ec-demo/timeline-ecnomic.html"></iframe>
 
-</script></section><section data-markdown><script type="text/template">
+<aside class="notes" data-markdown>时间作为更高层的一个维度。</aside></script></section><section data-markdown><script type="text/template">
 ### 关系数据
 
 <div class="fragment" data-fragment-index="0">树</div>
@@ -327,12 +318,12 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 
 <div class="fragment" data-fragment-index="0"><iframe style="width:1000px;height:600px;" data-md2r-src="./asset/ec-demo/hierarchy-tree.html"></iframe></div>
 
-</script></section><section data-markdown><script type="text/template">
+<aside class="notes" data-markdown>直接画，但是如果需要表达更多的维度？</aside></script></section><section data-markdown><script type="text/template">
 
 <iframe style="width:1400px;height:650px;" data-md2r-src="./asset/ec-demo/hierarchy-obama.html"></iframe>
 
 <aside class="notes" data-markdown>visual mapping</aside></script></section><section data-markdown><script type="text/template">
-深层下钻
+下钻
 
 <iframe style="width:1400px;height:580px;" data-md2r-src="./asset/ec-demo/hierarchy-disk.html"></iframe>
 
@@ -340,12 +331,12 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 #### 网络数据的可视化（图）
 
 
-<iframe style="width:1400px;height:600px;" data-md2r-src="./asset/ec-demo/graph-layout.html"></iframe>
+<div class="fragment" data-fragment-index="0"><iframe style="width:1400px;height:600px;" data-md2r-src="./asset/ec-demo/graph-layout.html"></iframe></div>
 
 <aside class="notes" data-markdown>graph 多种layout。</aside></script></section><section data-markdown><script type="text/template">
 #### 力导向
 
-<iframe style="width:1400px;height:600px;" data-md2r-src="./asset/ec-demo/force-webkit.html"></iframe>
+<div class="fragment" data-fragment-index="0"><iframe style="width:1400px;height:600px;" data-md2r-src="./asset/ec-demo/force-webkit.html"></iframe></div>
 
 </script></section><section data-markdown><script type="text/template">
 <aside class="notes" data-markdown>### 更多维度
@@ -391,9 +382,9 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 </script></section></div>
         </div>
 
-        <script src="./asset/md2reveal-0.0.1.6/lib/js/head.min.js"></script>
-        <script src="./asset/md2reveal-0.0.1.6/js/reveal.js"></script>
-        <script src="./asset/md2reveal-0.0.1.6/js/md2reveal.js"></script>
+        <script src="./asset/md2reveal-0.0.1.7/lib/js/head.min.js"></script>
+        <script src="./asset/md2reveal-0.0.1.7/js/reveal.js"></script>
+        <script src="./asset/md2reveal-0.0.1.7/js/md2reveal.js"></script>
 
         <script>
             function extend() {
@@ -411,12 +402,12 @@ weibo签到：11.8w 数据</aside></script></section><section data-markdown><scr
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: './asset/md2reveal-0.0.1.6/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: './asset/md2reveal-0.0.1.6/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './asset/md2reveal-0.0.1.6/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './asset/md2reveal-0.0.1.6/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: './asset/md2reveal-0.0.1.6/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-              // { src: './asset/md2reveal-0.0.1.6/plugin/math/math.js', async: true }
+              { src: './asset/md2reveal-0.0.1.7/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './asset/md2reveal-0.0.1.7/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './asset/md2reveal-0.0.1.7/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './asset/md2reveal-0.0.1.7/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './asset/md2reveal-0.0.1.7/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+              // { src: './asset/md2reveal-0.0.1.7/plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js
