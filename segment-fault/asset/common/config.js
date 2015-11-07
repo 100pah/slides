@@ -1,6 +1,6 @@
 (function () {
 
-    var debug = true;
+    var debug = false;
 
     var ecBase = debug
         ? '/sushuangwork/met/act/gitall/echarts'
