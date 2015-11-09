@@ -1,7 +1,6 @@
 (function () {
 
     var debug = false;
-
     var ecBase = debug
         ? '/sushuangwork/met/act/gitall/echarts'
         : '.';
@@ -27,6 +26,5 @@
         ],
         urlArgs: '_v_=' + (debug ? '' : +new Date())
     });
-
 
 })();
